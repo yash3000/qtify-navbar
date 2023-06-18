@@ -1,5 +1,8 @@
 .wrapper {
   display: flex;
+  flex-direction: row;
+  width: 70%;
+  justify-content: center;
 }
 .search {
   padding: 14px 20px;
@@ -7,16 +10,19 @@
   border-radius: 8px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
-  border: 1px solid var(--color-black);
-  width: 502px;
+  border: 1px solid var(--black-color);
+  width: 80%;
+  max-width: 502px;
 }
 
 .search-btn {
   border-radius: 0px 8px 8px 0px;
   padding: 6px 20px 14px;
-  height: 100%;
-  border: 1px solid var(--color-black);
+  height: inherit;
+  border: 1px solid var(--black-color);
   border-left: none;
   cursor: pointer;
-  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,0 +1,20 @@
+.HeroCardComponent{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 17rem;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.hero-content{
+  color: var(--white-color);
+  font-size: 2rem;
+  margin: 1.5rem;
+  text-align: center;
+}
+
+.hero-image{
+  margin: 1.5rem;
+}
