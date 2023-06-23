@@ -1,0 +1,15 @@
+.CardLayoutSection{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-section-heading{
+    color: var(--white-color);
+}
+.section-top-band{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+.collapse-button{
+    color: var(--primary-color);
+}
