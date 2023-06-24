@@ -6,5 +6,7 @@
 .section-divider{
     height: 1px;
     color: var(--primary-color);
-    width: 1680px;
+    width: 2100px;
+    position: relative;
+    left: -3rem;
 }

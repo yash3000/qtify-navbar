@@ -3,7 +3,7 @@ import "./search.css";
 const SearchBar = () => {
   return (
     <>
-      <div className="wrapper">
+      <div className="search-wrapper">
         <input className="search" />
         <button className="search-btn">
           <SearchIcon />

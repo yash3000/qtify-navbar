@@ -4,6 +4,7 @@
 }
 .card-section-heading{
     color: var(--white-color);
+    font-weight: 800;
 }
 .section-top-band{
     display: flex;
@@ -12,4 +13,17 @@
 }
 .collapse-button{
     color: var(--primary-color);
+    cursor: pointer;
+}
+.songs-filter-band{
+    display: flex;
+    flex-direction: row;
+    color: var(--white-color);
+    margin-bottom: 1rem;
+}
+.song-filter{
+    padding-inline: 20px;
+}
+.filterActive{
+    border-bottom: 4px solid var(--primary-color);
 }

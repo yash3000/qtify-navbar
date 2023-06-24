@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
-import CardComponent from "../CardComponent/CardComponent";
-import { topAlbumsUrl, } from "../config/config";
-import axios from "axios";
+import React from "react";
+import FaqMenu from "../FaqMenu/FaqMenu";
 import CardLayoutSection from "../CardLayoutSection/CardLayoutSection";
 
 
@@ -14,7 +12,6 @@ export default function CardLayoutGrid() {
       <CardLayoutSection 
         type="top"
       />
-      <hr className="section-divider"/>
       <CardLayoutSection 
         type="new"
       />
@@ -22,6 +19,8 @@ export default function CardLayoutGrid() {
       <CardLayoutSection 
         type="songs"
       />
+      <hr className="section-divider"/>
+      <FaqMenu />
     </div>
   );
 };

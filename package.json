@@ -14,10 +14,12 @@
     "web-vitals": "^2.1.4",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.5",
     "async": "^3.2.4",
     "axios": "^1.4.0",
-    "loader-utils": "3.2.1"
+    "loader-utils": "3.2.1",
+    "swiper": "^9.4.1"
   },
   "devDependencies": {
     "@babel/runtime": "7.13.8",
