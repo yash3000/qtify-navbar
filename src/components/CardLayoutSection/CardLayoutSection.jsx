@@ -15,11 +15,11 @@ export default function CardLayoutSection(props) {
   const [activeFilter, setActiveFilter] = useState('all')
 
   const filtersArray = [
-    {key : 'all', label : 'All'},
-    {key : 'rock', label : 'Rock'},
-    {key : 'jazz', label : 'Jazz'}, 
-    {key : 'blues', label : 'Blues'}
-  ] ;
+    { key: 'all', label: 'All' },
+    { key: 'rock', label: 'Rock' },
+    { key: 'jazz', label: 'Jazz' },
+    { key: 'blues', label: 'Blues' }
+  ];
 
   const getConfigURL = (type) => {
     switch (type) {
@@ -65,8 +65,8 @@ export default function CardLayoutSection(props) {
   }
 
   const filterSongsDataByFilters = (filter) => {
-    let filteredData = songsData.filter((songItem)=>{
-      if(filter === 'all'){
+    let filteredData = songsData.filter((songItem) => {
+      if (filter === 'all') {
         return true
       }
       return filter === songItem.genre.key
@@ -79,7 +79,7 @@ export default function CardLayoutSection(props) {
   }, []);
 
   useEffect(() => {
-    if(props.type === 'songs'){
+    if (props.type === 'songs') {
       filterSongsDataByFilters(activeFilter);
     }
   }, [activeFilter]);
@@ -94,8 +94,8 @@ export default function CardLayoutSection(props) {
       </div>
       {props.type === 'songs' &&
         <div className="songs-filter-band">
-          {filtersArray.map((filter)=>{
-            return(<div className={(filter.key === activeFilter) ? 'song-filter filterActive' : 'song-filter' } onClick={()=>{setActiveFilter(filter.key)}}>
+          {filtersArray.map((filter) => {
+            return (<div className={(filter.key === activeFilter) ? 'song-filter filterActive' : 'song-filter'} onClick={() => { setActiveFilter(filter.key) }}>
               {filter.label}
             </div>)
           })}
@@ -104,14 +104,15 @@ export default function CardLayoutSection(props) {
       <div className="CardLayoutSection">
         {filteredSongsData.length ?
           showAll ?
-          filteredSongsData.map((songDetail) => {
+            filteredSongsData.map((songDetail) => {
               return (<CardComponent
+                type={props.type}
                 key={songDetail.id}
                 songDetail={songDetail}
               />)
             }) : <Carousel
               data={filteredSongsData}
-              component={(item) => <CardComponent songDetail={item} />}
+              component={(item) => <CardComponent key={item.id} songDetail={item} type={props.type} />}
             />
           : <></>
         }
